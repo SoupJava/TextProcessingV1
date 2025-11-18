@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.textspringboot.mapper.UserMapper">
+    <select id="loginUser" resultType="com.example.textspringboot.Entity.user">
+        select * from user where user_id=#{userId}
+    </select>
+    <insert id="UserRegister" parameterType="com.example.textspringboot.Entity.user">
+        insert into user (user_id,password,user_name,user_tel,user_mail,user_avatar_url) values (#{userId},#{password},#{username},#{userTel},#{userMail},#{userAvatarUrl})
+    </insert>
+    <update id="UpdateUser" parameterType="com.example.textspringboot.Entity.user">
+        update user set password=#{password},user_name=#{username},user_tel=#{userTel},user_mail=#{userMail},user_avatar_url=#{userAvatarUrl} where user_id=#{userId}
+    </update>
+</mapper>

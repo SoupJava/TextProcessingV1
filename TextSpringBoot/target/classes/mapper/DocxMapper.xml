@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.textspringboot.mapper.DocxMapper">
+    <select id="SelectByUser" resultType="com.example.textspringboot.Entity.Docx">
+        select * from `${TableName}` where UserId=#{userId}
+    </select>
+    <select id="SelectByOne" resultType="com.example.textspringboot.Entity.Docx">
+        select * from `${TableName}` where FileName=#{FileName}
+    </select>
+    <select id="SelectNewFile" resultType="com.example.textspringboot.Entity.Docx">
+        select * from `${FileName}` where id = (SELECT max(id) FROM `${FileName}`)
+    </select>
+    <select id="CountTable" resultType="int">
+        select count(*) from `${FileName}`
+    </select>
+    <insert id="AddDocx">
+        insert into `${TableName}` (DocxName,FileName,UserId,UploadTime,Address) values (#{docx.DocxName},#{docx.FileName},#{docx.UserId},#{docx.UploadTime},#{docx.Address})
+    </insert>
+    <delete id="DelDocx">
+        delete from `${TableName}` where FileName=#{FileName}
+    </delete>
+    <update id="UpdateAddress">
+        update `${TableName}` set Address=#{Address} where FileName=#{FileName}
+    </update>
+</mapper>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.textspringboot.mapper.DocxVersionMapper">
+    <select id="SelectFile" resultType="com.example.textspringboot.Entity.DocxVersion">
+        select * from docxversion where DocxName=#{DocxName}
+    </select>
+    <select id="ListFile" resultType="com.example.textspringboot.Entity.DocxVersion">
+        select * from docxversion where UserId=#{UserId}
+    </select>
+    <insert id="AddFile" parameterType="com.example.textspringboot.Entity.DocxVersion">
+        insert into docxversion (DocxName,UserId,CreateTime,TableName,Address,neglect,Iteration,version,remind,bigversion,smallversion) values(#{UserId},#{DocxName},#{CreateTime},#{TableName},#{Address},#{Neglect},#{Iteration},#{Version},#{Remind},#{BV},#{SV})
+    </insert>
+    <delete id="DelFile">
+        delete from docxversion where DocxName=#{DocxName}
+    </delete>
+    <update id="UpdateParameter">
+        update docxversion set neglect=#{neglect},Iteration=#{Iteration},version=#{version},remind=#{remind} where DocxName=#{DocxName}
+    </update>
+    <update id="SetVersion">
+        update docxversion set bigversion=#{BV},smallversion=#{SV} where DocxName=#{DocxName}
+    </update>
+    <update id="AddFileTable">
+        CREATE TABLE `${TableName}` (
+                                `id` int NOT NULL AUTO_INCREMENT COMMENT '自增id',
+                                `DocxName` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '论文名称',
+                                `FileName` varchar(255) NOT NULL COMMENT '论文版本名称',
+                                `UserId` varchar(255) NOT NULL COMMENT '用户ID',
+                                `UploadTime` varchar(255) NOT NULL COMMENT '上传时间',
+                                `Address` varchar(255) NOT NULL COMMENT '存储地址',
+                                PRIMARY KEY (`id`,`FileName`) USING BTREE
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+    </update>
+    <update id="DelFileTable">
+        DROP TABLE IF EXISTS `${TableName}`
+    </update>
+</mapper>
