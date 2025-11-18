@@ -1,4 +1,4 @@
-<img width="1865" height="964" alt="image" src="https://github.com/user-attachments/assets/f564c1f5-b5c5-48c1-a2d7-4ebc861ae385" /># TextProcessingV1
+# TextProcessingV1
 Vue3-SpringBoot-FastAPI框架版本
 # 1.1 开发背景
 随着我国教育水平的不断提高，每年的高校毕业生也越来越多。当高校毕业生在撰写毕业论
@@ -16,7 +16,10 @@ Vue3-SpringBoot-FastAPI框架版本
 3. 后端数据库采用MySQL8.0数据库
 <img width="596" height="279" alt="image" src="https://github.com/user-attachments/assets/4a9a18f0-0b35-4c3d-b22d-c80e2932962d" />
 # 3.页面设计
-![Uploading image.png…]()
+<img width="1865" height="964" alt="image" src="https://github.com/user-attachments/assets/f564c1f5-b5c5-48c1-a2d7-4ebc861ae385" />
+<img width="1865" height="964" alt="image" src="https://github.com/user-attachments/assets/6d7fab30-398c-43d9-9261-8964d966efea" />
+<img width="1865" height="964" alt="image" src="https://github.com/user-attachments/assets/91a76264-ba0d-49cf-a96b-1b483c357002" />
+
 # 4.创新点 
 4.1 论文版本管理
 我们通过调查发现，在论文修改的过程中，当缺少一个良好的版本管理时，改版次数过
