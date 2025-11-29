@@ -21,7 +21,8 @@ Vue3-SpringBoot-FastAPI框架版本
 # 3.页面设计
 <img width="1865" height="964" alt="image" src="https://github.com/user-attachments/assets/f564c1f5-b5c5-48c1-a2d7-4ebc861ae385" />
 <img width="1865" height="964" alt="image" src="https://github.com/user-attachments/assets/6d7fab30-398c-43d9-9261-8964d966efea" />
-<img width="1865" height="964" alt="image" src="https://github.com/user-attachments/assets/91a76264-ba0d-49cf-a96b-1b483c357002" />
+<img width="553" height="286" alt="image" src="https://github.com/user-attachments/assets/65782c1f-3522-4faf-b254-54a7b5144bdb" />
+
 
 # 4.创新点 
 4.1 论文版本管理
